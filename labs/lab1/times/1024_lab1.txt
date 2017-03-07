@@ -1,0 +1,147 @@
+Testing size: 1024 with 1 processes
+
+real	0m1.396s
+user	0m0.720s
+sys	0m0.194s
+
+real	0m1.440s
+user	0m0.802s
+sys	0m0.246s
+
+real	0m1.440s
+user	0m0.823s
+sys	0m0.241s
+
+real	0m1.468s
+user	0m0.869s
+sys	0m0.232s
+
+real	0m1.410s
+user	0m0.802s
+sys	0m0.203s
+Testing size: 1024 with 2 processes
+
+real	0m1.445s
+user	0m1.542s
+sys	0m0.360s
+
+real	0m1.455s
+user	0m1.516s
+sys	0m0.346s
+
+real	0m1.468s
+user	0m1.482s
+sys	0m0.401s
+
+real	0m1.434s
+user	0m1.462s
+sys	0m0.375s
+
+real	0m1.416s
+user	0m1.520s
+sys	0m0.368s
+Testing size: 1024 with 4 processes
+
+real	0m1.503s
+user	0m2.683s
+sys	0m0.604s
+
+real	0m1.447s
+user	0m2.982s
+sys	0m0.679s
+
+real	0m1.488s
+user	0m2.833s
+sys	0m0.689s
+
+real	0m1.556s
+user	0m2.594s
+sys	0m0.622s
+
+real	0m1.459s
+user	0m2.707s
+sys	0m0.574s
+Testing size: 1024 with 8 processes
+
+real	0m1.567s
+user	0m5.654s
+sys	0m1.126s
+
+real	0m1.579s
+user	0m5.738s
+sys	0m1.362s
+
+real	0m1.485s
+user	0m5.495s
+sys	0m1.204s
+
+real	0m1.594s
+user	0m6.415s
+sys	0m1.245s
+
+real	0m1.542s
+user	0m6.298s
+sys	0m1.309s
+Testing size: 1024 with 16 processes
+
+real	0m1.656s
+user	0m10.431s
+sys	0m1.980s
+
+real	0m1.702s
+user	0m11.887s
+sys	0m2.381s
+
+real	0m1.682s
+user	0m12.683s
+sys	0m2.146s
+
+real	0m1.726s
+user	0m11.434s
+sys	0m1.946s
+
+real	0m1.650s
+user	0m11.872s
+sys	0m2.287s
+Testing size: 1024 with 32 processes
+
+real	0m2.207s
+user	0m22.541s
+sys	0m3.933s
+
+real	0m2.224s
+user	0m22.727s
+sys	0m3.875s
+
+real	0m2.267s
+user	0m21.902s
+sys	0m4.606s
+
+real	0m2.238s
+user	0m22.463s
+sys	0m3.962s
+
+real	0m2.236s
+user	0m22.075s
+sys	0m3.662s
+Testing size: 1024 with 64 processes
+
+real	0m4.184s
+user	1m24.899s
+sys	0m9.197s
+
+real	0m4.215s
+user	1m28.934s
+sys	0m10.002s
+
+real	0m4.613s
+user	1m24.198s
+sys	0m12.880s
+
+real	0m4.272s
+user	1m23.196s
+sys	0m11.318s
+
+real	0m4.345s
+user	1m24.080s
+sys	0m11.382s
