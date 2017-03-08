@@ -15,39 +15,47 @@ SIZES := 2 4 8 16 32 64 128 256 512 1024 2048 4096
 #default number of processes
 n=4
 
+#comp
 comp c:
 	$(compiler) -g $(flags) $(std) -o $(prgm) $(prgm).$(ext) $(lib)
 
+#run
 run r:
 	$(runner) -n $(n) $(prgm) $(f)
 
+#compile serial
 serial-c s-c:
-	g++ -std=c++11 -o lab1Serial lab1Serial.cpp
+	g++ -std=c++11 -o serial/gsS serial/gsS.cpp
 
+#run the serial version
 serial-r s-r:
-	cat $(f) | ./lab1Serial
+	cat $(f) | ./serial/gsS
 
-genTests gen compile-tests c-t:
+#compile all the tests for the sizes
+genTests gen compile-tests g-t:
 	@for f in $(SIZES); do\
 		./gengs $${f} $(err); \
 		mv $${f}.txt gen/$${f}.txt; \
 	done 
 
-runTests tests r-t:
-	#@for n in $(PROCS); do \
- 	#	for f in $(SIZES); do\
-    #        $(runner) -n $${n} $(prgm) gen/$${f}.txt > tests/$${f}_$(prgm).txt;\
-	#		./gsref gen/$${f}.txt > tests/$${f}_gsref.txt;\
-	#		cmp --silent tests/$${f}_$(prgm).txt tests/$${f}_gsref.txt || echo "Err: test failed on: $${f}";\
-	#	done \
-	#done
+#checks that all the results for each 
+conTests consistent c-t:
+	@for n in $(PROCS); do\
+		for f in $(SIZES); do\
+	        $(runner) -n $${n} $(prgm) gen/$${f}.txt > tests/temp.txt;\
+			cmp --silent tests/$${f}_$(prgm).txt tests/temp.txt || echo "Err: test failed on: $${f}";\
+		done \
+	done
 
+#compare the output between gsref and gs ensure that consistency test has passed first
+runTests tests r-t:
 	for f in $(SIZES); do\
         $(runner) -n $(n) $(prgm) gen/$${f}.txt > tests/$${f}_$(prgm).txt;\
 		./gsref gen/$${f}.txt > tests/$${f}_gsref.txt;\
 		cmp --silent tests/$${f}_$(prgm).txt tests/$${f}_gsref.txt || echo "Err: test failed on: $${f}";\
 	done 
 
+#tests all process with all times 5 times to be used later for averaging
 timeTests t-t:
 	@for n in $(PROCS); do \
  		for f in $(SIZES); do\
@@ -58,9 +66,11 @@ timeTests t-t:
 		done \
 	done
 
+#runs and prints the times
 timed:
 	{ time $(runner) -n $(n) $(prgm) gen/$(f).txt >/dev/null; }
 
+#deletes the files assumes the folders have all been created
 clean:
 	rm tests/*.txt
 	rmdir tests
