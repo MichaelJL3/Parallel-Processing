@@ -12,24 +12,22 @@ const int MAX=1000000;
 const int CHUNK=4;
 const char* filename="parallel_output.txt";
 
-void ompSieve(int* ar, int n){
-	++n;
+void ompSieve(char* ar, int n){
+	int m=floor((n+1)/2.0);
+	int incr;
 
-	int m=floor(n/2.0);
-
-	#pragma omp for schedule(static, CHUNK)
+	#pragma omp for schedule(static, CHUNK) private(incr)
 	for(int i=3; i<=m; i+=2){
-		//may run even if it can be skipped <- considering this trivial
 		if(!ar[i]){
-			for(int j=i+i; j<n; j+=i){
-				//can be updated by multiple threads but each will assign one no lock necessary
+			incr=i+i;
+			for(int j=i+incr; j<=n; j+=incr){
 				ar[j]=1;
 			}
 		}
 	}
 }
 
-void output(int* ar, int n){
+void output(char* ar, int n){
 	std::ofstream fd;
 	int dist=0, prev=2;
 
@@ -51,7 +49,7 @@ void output(int* ar, int n){
 int main(int argv, char** argc){
 	double st, en;
 	int n, t=1;
-	int *primes;
+	char *primes;
 
 	if(argv<3){
 		puts("Error: not enough arguments\n./serial N T");
@@ -68,7 +66,7 @@ int main(int argv, char** argc){
 
 	omp_set_num_threads(t);
 
-	primes=new int[n+1];
+	primes=new char[n+1]();
 
 	st=omp_get_wtime();
 	ompSieve(primes, n);

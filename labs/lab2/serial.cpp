@@ -9,21 +9,21 @@
 const int MAX=1000000;
 const char* filename="serial_output.txt";
 
-void sieve(int* ar, int n){
-	++n;
-
-	int m=floor(n/2.0);
+void sieve(char* ar, int n){
+	int m=floor((n+1)/2.0);
+	int incr;
 
 	for(int i=3; i<=m; i+=2){
 		if(!ar[i]){
-			for(int j=i+i; j<n; j+=i){
+			incr=i+i;
+			for(int j=i+incr; j<=n; j+=incr){
 				ar[j]=1;
 			}
 		}
 	}
 }
 
-void output(int* ar, int n){
+void output(char* ar, int n){
 	std::ofstream fd;
 	int dist=0, prev=2;
 
@@ -45,7 +45,7 @@ void output(int* ar, int n){
 int main(int argv, char** argc){
 	double st, en;
 	int n;
-	int *primes;
+	char *primes;
 
 	if(argv<2){
 		puts("Error: not enough arguments\n./serial N");
@@ -59,7 +59,7 @@ int main(int argv, char** argc){
 		return 1;
 	}
 
-	primes=new int[n+1];
+	primes=new char[n+1]();
 
 	st=clock();
 	sieve(primes, n);
