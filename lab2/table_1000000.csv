@@ -1,0 +1,8 @@
+Run-Time 0.005578 with 1 threads for range 2-1000000
+Run-Time 0.005448 with 2 threads for range 2-1000000
+Run-Time 0.004888 with 5 threads for range 2-1000000
+Run-Time 0.006257 with 10 threads for range 2-1000000
+Run-Time 0.006037 with 20 threads for range 2-1000000
+Run-Time 0.009175 with 40 threads for range 2-1000000
+Run-Time 0.007614 with 80 threads for range 2-1000000
+Run-Time 0.009133 with 100 threads for range 2-1000000

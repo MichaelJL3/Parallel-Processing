@@ -1,5 +1,0 @@
--0.016015
-0.090851
-0.130309
-0.137519
-total number of iterations: 9

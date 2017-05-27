@@ -1,0 +1,147 @@
+Testing size: 2048 with 1 processes
+
+real	0m3.496s
+user	0m2.896s
+sys	0m0.247s
+
+real	0m3.480s
+user	0m3.002s
+sys	0m0.228s
+
+real	0m3.257s
+user	0m2.640s
+sys	0m0.305s
+
+real	0m3.265s
+user	0m2.470s
+sys	0m0.262s
+
+real	0m3.258s
+user	0m2.557s
+sys	0m0.320s
+Testing size: 2048 with 2 processes
+
+real	0m2.980s
+user	0m4.597s
+sys	0m0.496s
+
+real	0m2.939s
+user	0m4.586s
+sys	0m0.411s
+
+real	0m2.950s
+user	0m4.767s
+sys	0m0.422s
+
+real	0m2.910s
+user	0m4.602s
+sys	0m0.388s
+
+real	0m2.943s
+user	0m4.531s
+sys	0m0.454s
+Testing size: 2048 with 4 processes
+
+real	0m3.025s
+user	0m9.023s
+sys	0m0.790s
+
+real	0m3.247s
+user	0m9.847s
+sys	0m0.713s
+
+real	0m2.992s
+user	0m8.825s
+sys	0m0.717s
+
+real	0m3.003s
+user	0m9.041s
+sys	0m0.807s
+
+real	0m3.012s
+user	0m9.214s
+sys	0m0.826s
+Testing size: 2048 with 8 processes
+
+real	0m3.003s
+user	0m18.438s
+sys	0m1.312s
+
+real	0m2.762s
+user	0m16.083s
+sys	0m1.250s
+
+real	0m3.012s
+user	0m17.440s
+sys	0m1.490s
+
+real	0m3.046s
+user	0m17.068s
+sys	0m1.363s
+
+real	0m3.052s
+user	0m18.345s
+sys	0m1.446s
+Testing size: 2048 with 16 processes
+
+real	0m3.172s
+user	0m36.116s
+sys	0m2.664s
+
+real	0m3.241s
+user	0m34.488s
+sys	0m2.478s
+
+real	0m3.461s
+user	0m37.424s
+sys	0m2.786s
+
+real	0m3.193s
+user	0m36.028s
+sys	0m2.469s
+
+real	0m3.498s
+user	0m39.699s
+sys	0m2.664s
+Testing size: 2048 with 32 processes
+
+real	0m3.784s
+user	1m9.518s
+sys	0m5.134s
+
+real	0m3.500s
+user	1m9.138s
+sys	0m4.561s
+
+real	0m3.767s
+user	1m12.879s
+sys	0m5.520s
+
+real	0m3.791s
+user	1m10.570s
+sys	0m4.808s
+
+real	0m3.806s
+user	1m11.903s
+sys	0m4.890s
+Testing size: 2048 with 64 processes
+
+real	0m6.982s
+user	3m21.896s
+sys	0m11.707s
+
+real	0m6.940s
+user	3m26.748s
+sys	0m13.170s
+
+real	0m6.934s
+user	3m29.913s
+sys	0m12.547s
+
+real	0m7.290s
+user	3m24.292s
+sys	0m14.306s
+
+real	0m6.886s
+user	3m16.981s
+sys	0m14.619s
